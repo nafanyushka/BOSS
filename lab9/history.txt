@@ -1,0 +1,46 @@
+ldd /bin/login | grep pam
+ll /lib64/libpam*
+ll /lib64/security/
+vim /etc/pam.d/system-auth
+vim /etc/pam.d/su
+man su
+man hostname
+sudo vim /etc/pam.d/su
+su -c "hostname mephi"
+sudo vim /etc/pam.d/su
+su -c "hostname mephi"
+sudo vim /etc/pam.d/su
+man useradd
+sudo useradd -G wheel user1
+sudo passwd user1
+su - user1
+sudo vim /etc/pam.d/su
+su - user1
+sudo vim /etc/pam.d/su
+sudo vim /etc/pam.d/login
+sudo touch /etc/securetty
+su -
+su - user1
+sudo vim /etc/pam.d/login
+man pam_pwquality
+sudo vim /etc/security/pwquality.conf
+sudo vim /etc/pam.d/system-auth
+sudo passwd user1
+sudo vim /etc/security/pwquality.conf
+sudo vim /etc/pam.d/system-auth
+man pam_limits
+sudo vim /etc/security/limits.conf
+su - user1
+sudo vim /etc/security/limits.conf
+wget https://raw.githubusercontent.com/linux-pam/linux-pam/master/examples/check_user.c
+gcc check.c -o check -lpam -lpam_misc
+sudo vim /etc/pam.d/check
+./check naf
+sudo vim /etc/pam.d/check
+./check_user user1
+vim check.c
+gcc check_user.c -o check -lpam -lpam_misc
+./check naf
+./check user1
+su -
+./check_user naf
